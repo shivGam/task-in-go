@@ -8,7 +8,7 @@ import (
 	"github.com/shivGam/task-in-go/internal/db"
 )
 
-func healthCheckup(w http.ResponseWriter,r *http.Request){
+func HealthCheckup(w http.ResponseWriter,r *http.Request){
 	err := db.DB.Ping(context.Background())
 	w.Header().Set("Content-Type" , "application/json")
 	if err!=nil {
